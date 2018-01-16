@@ -1,0 +1,2 @@
+class DepartureItem < ApplicationRecord
+end
