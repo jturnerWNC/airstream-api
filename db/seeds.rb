@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-departure_items = DepartureItem.create!([
+tasks = Task.create!([
     {
       title: 'Raise stabilizers',
       description: 'Use the tool located in the locker to spin the 4 specific bolts near each tire in order to raise 

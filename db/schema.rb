@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116221251) do
+ActiveRecord::Schema.define(version: 20180118201725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "departure_items", force: :cascade do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
