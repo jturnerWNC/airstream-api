@@ -9,6 +9,18 @@ module Api::V1
       render json: @tasks
     end
 
+    # GET /tasks/arrivals
+    def arrivals
+      @arrival_tasks = Task.where(isDeparture: false).order('updated_at DESC')
+      render json: @arrival_tasks
+    end
+
+    # GET /tasks/arrivals
+    def departures
+      @departure_tasks = Task.where(isDeparture: true).order('updated_at DESC')
+      render json: @departure_tasks
+    end
+
     # GET /tasks/1
     def show
       render json: @tasks
@@ -41,13 +53,13 @@ module Api::V1
 
     private
       # Use callbacks to share common setup or constraints between actions.
-      def set_departure_item
+      def set_task
         @task = Task.find(params[:id])
       end
 
       # Only allow a trusted parameter "white list" through.
       def task_params
-        params.require(:task).permit(:title, :description)
+        params.require(:task).permit(:title, :description, :isDeparture)
       end
   end
 end
