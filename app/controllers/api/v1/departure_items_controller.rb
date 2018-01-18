@@ -4,7 +4,7 @@ module Api::V1
 
     # GET /departure_items
     def index
-      @departure_items = DepartureItem.all
+      @departure_items = DepartureItem.order('updated_at DESC')
 
       render json: @departure_items
     end
@@ -19,7 +19,7 @@ module Api::V1
       @departure_item = DepartureItem.new(departure_item_params)
 
       if @departure_item.save
-        render json: @departure_item, status: :created, location: @departure_item
+        render json: @departure_item, status: :created
       else
         render json: @departure_item.errors, status: :unprocessable_entity
       end
