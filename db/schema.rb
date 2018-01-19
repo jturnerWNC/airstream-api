@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180118205922) do
+ActiveRecord::Schema.define(version: 20180119010721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20180118205922) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "isDeparture"
+    t.text "task_image"
   end
 
 end

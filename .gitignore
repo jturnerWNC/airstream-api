@@ -17,3 +17,6 @@
 
 # make sure to ignore your secrets file
 /config/secrets.yml
+
+# always ignore your envirionment variables
+.env

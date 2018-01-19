@@ -45,3 +45,15 @@ gem 'hirb', '~> 0.7.3'
 
 # Use rack-cors for establishing cross origin resource sharing.
 gem 'rack-cors', '~> 1.0', '>= 1.0.2'
+
+# Use dotenv to manage environment variables
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
+
+#Use carrierwave to assist with image uploading
+gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+
+#Use carrierwave-aws to upload images to AWS S3 buckets
+gem 'carrierwave-aws', '~> 1.3'
+
+#Use mini for image manipulation for uploads
+gem 'mini_magick', '~> 4.8'
