@@ -29,7 +29,6 @@ module Api::V1
     # POST /tasks
     def create
       @task = Task.new(task_params)
-
       if @task.save
         render json: @task, status: :created
       else
@@ -59,7 +58,7 @@ module Api::V1
 
       # Only allow a trusted parameter "white list" through.
       def task_params
-        params.require(:task).permit(:title, :description, :isDeparture)
+        params.require(:task).permit(:title, :description, :isDeparture, :task_image)
       end
   end
 end
